@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB5QGSE963"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RB5QGSE963');
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Larry's Lentils & Friends - Taste power!</title>
+
+    <meta property="og:url" content="https://naehe.com" />
+    <meta property="og:title" content="Let's tell the histories that honor Asians, together." />
+    <meta property="og:description" content="Instead of lamenting the lack of Asian-American textbooks, why can't we author, publish, and distribute our own?" />
+    <meta property="og:image" content="https://naehe.com/images/dhstdiofeat.png" />
+
+    <title>Naehe - Human Resources Risk Management</title>
 
     <link rel="icon" type="image/png" href="./favicon.png"/>
 
@@ -12,7 +29,7 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/9.16.0/firebase-auth-compat.js"></script>
     <script defer src="/__/firebase/9.16.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.16.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.16.0/firebase-firestore-co:image" content="https://naehe.com/images/mpat.js"></script>
     <script defer src="/__/firebase/9.16.0/firebase-functions-compat.js"></script>
     <script defer src="/__/firebase/9.16.0/firebase-messaging-compat.js"></script>
     <script defer src="/__/firebase/9.16.0/firebase-storage-compat.js"></script>
@@ -29,26 +46,34 @@
 
     <style media="screen">
       body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #mast-top { background-color: #00a100; height: 60px; display: flex; justify-content: center; align-items: center; position: sticky; top: 0px; }
+
+      a { display: block; text-align: center; font-size: 2em; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      p { margin-block-start: 0.5em; margin-block-end: 0.5em; }
+
+      #mast-top { background-color: #ffffff; height: 120px; display: flex; align-items: center; position: sticky; top: 0px; padding: 0px 0px 0px 50px; }
       #mast-image { height: 600px; background-image: url("./images/ah-07b01-work.jpg"); background-position: center; background-size: cover; background-origin: border-box; background-repeat: no-repeat }
 
-      // #mast-CTA { height: 300px; background-color: #ff00ff; display: flex; align-items: center; justify-content: center; }
-      // #mast-CTA { height: 300px; background-color: #00a100; display: flex; align-items: center; justify-content: center; }
       #mast-CTA-mobile { display: none; }
       #mast-CTA-desktop { display: flex; }
       .mast-message { color: #ffffff; }
       .fix-mast-message-margin { margin: 0px 0px 0px -45px; }
-      #service-description-container { background-color: #f9ab4e; display: flex; flex-direction: column; }
+      #service-description-container { background-color: #f19604; display: flex; flex-direction: column; }
       #introduction-container { display: flex; flex-direction: row; margin: 15px; padding: 0px 0px 10px 0px; }
       #introduction-right-container { display: flex; flex-direction: column; margin: 15px 0px 5px 3px; }
       #intro-pretitle { font-family: "myriad-pro-condensed", sans-serif; font-style: normal; font-weight: 600; font-size: 12px; margin: 0px 0px 10px 0px; }
       .brand-attribution { font-family: "myriad-pro-condensed", sans-serif; font-style: normal; font-weight: 600; font-size: 11px; }
+      .purple, .emphatic { color: purple; }
+      .orange { color: orange; }
+
+      .copyright { font-size: smaller; color: #ffffff; padding: 20px 0px 0px 0px; }
       .superscript-special { font-family: "adorn-smooth-engraved", sans-serif; font-style: normal; font-weight: 400; font-size: 19px; vertical-align: top; }
       #intro-title { font-family: "adorn-smooth-engraved", sans-serif; font-style: normal; font-weight: 400; font-size: 29px; margin: 0px 0px 15px 0px; }
       #intro-benefit-image { margin: 0px; padding: 0px; flex-direction: row;}
       #intro-description { font-family: "myriad-pro-condensed", sans-serif; font-style: normal;font-weight: 400; font-size: 16px; margin: 5px 0px 10px 0px; }
       #intro-branding { text-align: right; }
       #rewards-container { margin: 5px 15px 5px 15px; border-bottom: solid #000000; }
+      #sign-up { display: grid; justify-content: center; align-items: center;  }
+
 
       section { display: flex; flex-direction: row; margin: 0px 10px 10px 10px; }
       article { padding: 0px; margin: 0px; flex-direction: column; flex: 100px; }
@@ -61,9 +86,16 @@
 
         #rewards-contact-left-container { padding: 0px; margin: 0px; display: inline-block; }
         #rewards-contact-right-container { padding: 0px; margin: 0px; display: inline-block; }
+
+        .events-title { font-family: "myriad-pro-semiextended", sans-serif; font-style: normal; font-weight: 800; color: #000000; font-size: 52px; margin: 0px 0px 15px 0px; } 
+        .events-title-a { font-family: "myriad-pro-semiextended", sans-serif; font-style: normal; font-weight: 800; color: #000000; font-size: 22px; } 
  
-        .rewards-title { font-family: "myriad-pro-semiextended", sans-serif; font-style: normal; font-weight: 300; color: #a21e21; font-size: smaller; margin: 30px 0px 10px 0px; } 
+        .rewards-title { font-family: "myriad-pro-semiextended", sans-serif; font-style: normal; font-weight: 300; color: #a21e21; font-size: smaller; margin: 0px 0px 10px 0px; } 
+
+
+        #image-remark { font-family: "myriad-pro-semi-condensed", sans-serif; font-style: normal; font-weight: 700; font-size: 30px; margin: 10px 0px 15px 0px; }
         .rewards-benefit { font-family: "myriad-pro-semi-condensed", sans-serif; font-style: normal; font-weight: 700; font-size: 30px; margin: 30px 0px 15px 0px; }
+        .rewards-benefit-1 { color: #ffffff; font-family: "myriad-pro-semi-condensed", sans-serif; font-style: normal; font-weight: 700; font-size: 30px; margin: 30px 0px 15px 0px; }
         #rewards-benefit-image { margin: 0px; padding: 0px; }
         .rewards-benefit-details { font-family: "myriad-pro", sans-serif; font-style: normal; font-weight: 400; font-size: x-small; }
         .bold { font-weight: 700; }
@@ -80,8 +112,43 @@
         #rewards-educate-url { font-family: "myriad-pro-condensed", sans-serif; font-style: normal; font-weight: 700; font-size: larger; }
 
         #benefit-container { margin: 5px 15px 5px 15px; border-bottom: solid #000000; } 
-        .repeat-principal-benefit { font-size: 60px; }
+
+        #rsvp-container { background-color: #f6f2ec; display: flex; flex-direction: column; align-items: center;  padding: 20px 0px 0px 0px; } 
+
+        #footer-container-1 { text-align: center;  background-color: #f19604; margin: 0px 0px 0px 0px; padding: 20px 0px 20px 0px; } 
+
         #footer-container { text-align: center; margin: 10px 0px 10px 0px; } 
+
+        #rsvp-message { color: #000000; margin: 10px 0px 20px 0px; }
+
+        .rsvp-image { width: 500px; padding-top: 0em; padding-right: 0em; padding-bottom: 500px; padding-left: 0em; background-position-x: center; background-position-y: center; background-size: cover; background-repeat: no-repeat; background-image: url(https://d3m889aznlr23d.cloudfront.net/img/events/id/458/458597950/assets/2ae430c287e6e031e28e50615a7dcab5.Web_150DPI-20200911_WeWork_Gotham-Center-NYC_002.jpg); }
+
+        .wework-event-title { font-size: 1.5rem; text-align: center; color: rgb(241, 150, 4); line-height: 1.4; }
+
+        .wework-event-date { font-size: 1.125rem; color: rgb(241, 150, 4); text-align: center; line-height: 1.4; }
+
+        .wework-event-arrival { font-size: 0.75rem; color: rgb(241, 150, 4); text-align: center; line-height: 1.4; padding: 0px 15px; }
+
+        #wework-event-arrival_ {  }
+ 
+        .pointer { cursor: pointer; }
+        .p0 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
+
+        .grp { margin: 0 auto; width: 100%; }
+
+        [block-type=button]>a { position: static!important; }
+        
+        [block-type=button]>a:before { content: ""; position: absolute; }
+
+        #wework-button-container { margin: 10px 0px 50px 0px; }
+
+        .wework-event-button { width: 15em; height: 10ex; background-color: orange; border: none; border-radius: 5px; font-weight: bold; color: white; cursor: pointer; }
+
+        #benefit-container-1 { text-align: center; margin: 5px 15px 5px 15px; border-bottom: solid #000000; } 
+
+        #benefit-container-2 { text-align: center; margin: 5px 15px 15px 15px; } 
+
+        .repeat-principal-benefit { font-size: 35px; }
 
       .contact-container { display: inline; }
 
@@ -92,23 +159,36 @@
 
       #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
       #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+
       #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+
+
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
       #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
 
+      .feature-tm { display: flex; flex-direction: row; padding: 30px 0px 20px 0px; }
+      .feature-tm a { padding: 0px }
 
+      .feature-tm-image { width: 200px; margin: 0px 10px 0px 0px; } 
+
+      #featured-event-container-desktop {display: flex; flex-direction: row; }
+      #featured-event-container-mobile {display: none; }
+
+      #featured-event-image { flex-direction: column; flex: 200px; background-image: url(./images/dhstdiofeat.png); background-position: center; background-size: cover; background-repeat: repeat; background-attachment: scroll;  }
+      #featured-event-announcement { background-color: #f6f2ec; flex-direction: column; flex: 200px; padding: 30px 10px 50px 50px; }
 
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
         body { /* border-top: 16px solid #00a100; */ }
-        #mast-top { background-color: #00a100; height: 45px; display: flex; align-items: center; justify-content: center; }
+
+        p { margin: 5px 0px; } 
+
+        #mast-top { background-color: #ffffff; height: 80px; position: relative; display: flex; align-items: center; justify-content: center; padding: 0px; }
         #mast-image { height: 300px; background-image: url("./images/ah-07b01-small.jpg"); background-position: center; background-size: cover; background-origin: border-box; background-repeat: no-repeat }
         #mast-CTA-mobile { height: 300px; background-color: #00a100; display: flex; align-items: center; justify-content: center; flex-direction: column; }
         #mast-CTA-desktop { display: none; }
         #mast-button { border: none; cursor: pointer; height: 200px; appearance: none; background-color: inherit; url(./images/LL&F-010-ntrdith.png); }
-        /* #mast-button:active { background-color; inherit; url(./images/LL&F-01-ntrdith.png);  } */
-        /* .mast-message { color: #ffffff; } */
+
         #service-description-container { background-color: #f9ab4e; display: flex; flex-direction: column; }
         #footer-container { text-align: center; margin: 10px 0px 10px 0px; } 
         #introduction-container { display: flex; flex-direction: row; margin: 15px; border-bottom: thick double #32a1ce; padding: 0px 0px 10px 0px; }
@@ -125,7 +205,8 @@
         #rewards-container { margin: 5px 15px 5px 15px; border-bottom: solid #000000; }
 
         #benefit-container { margin: 5px 15px 5px 15px; border-bottom: solid #000000; } 
-        .repeat-principal-benefit { font-size: 60px; }
+
+        .repeat-principal-benefit { font-size: 25px; }
 
         #rewards-type-container { }
         #rewards-buyer-container { }
@@ -138,6 +219,19 @@
 
         .rewards-seller { border-top: none; }
 
+        .rewards-benefit-1 { color: #ffffff; font-family: "myriad-pro-semi-condensed", sans-serif; font-style: normal; font-weight: 700; font-size: 20px; margin: 30px 0px 15px 0px; }
+
+        .events-title { font-family: "myriad-pro-semiextended", sans-serif; font-style: normal; font-weight: 800; color: #000000; font-size: 32px; margin: 10px 0px 0px 0px; } 
+
+        #featured-event-announcement { background-color: #f6f2ec; flex-direction: column; flex: 200px; padding: 30px 30px 30px 30px; }
+        .feature-tm-image { width: 100px; margin: 0px 10px 0px 0px; } 
+        .feature-tm a { padding: 0px }
+
+        #featured-event-image { flex-direction: column; flex: 400px; background-image: url(./images/dhstdiofeat.png); background-position: center; background-size: cover; background-repeat: repeat; background-attachment: scroll;  }
+
+        .rsvp-image { width: 300px; padding-top: 0em; padding-right: 0em; padding-bottom: 300px; padding-left: 0em; background-position-x: center; background-position-y: center; background-size: cover; background-repeat: no-repeat; background-image: url(https://d3m889aznlr23d.cloudfront.net/img/events/id/458/458597950/assets/2ae430c287e6e031e28e50615a7dcab5.Web_150DPI-20200911_WeWork_Gotham-Center-NYC_002.jpg); }
+
+        .wework-event-arrival { font-size: 0.75rem; color: rgb(241, 150, 4); text-align: center; line-height: 1.4; padding: 0px 15px; }
 
         article { padding: 0px; margin: 0px; flex-direction: column; flex: 100px; }
         article-contact { flex: 1; }
@@ -150,6 +244,7 @@
         #rewards-contact-right-container { padding: 0px; margin: 0px; display: inline-block; }
  
         .rewards-title { font-family: "myriad-pro-semiextended", sans-serif; font-style: normal; font-weight: 300; color: #a21e21; font-size: smaller; margin: 0px 0px 10px 0px; } 
+        
         .rewards-benefit { font-family: "myriad-pro-semi-condensed", sans-serif; font-style: normal; font-weight: 700; font-size: larger; margin: 0px 0px 15px 0px; }
         #rewards-benefit-image { margin: 0px; padding: 0px; }
         .rewards-benefit-details { font-family: "myriad-pro", sans-serif; font-style: normal; font-weight: 400; font-size: x-small; }
@@ -165,142 +260,97 @@
        
 
         .contact-container { display: inline; } 
+
+        #featured-event-container-mobile {display: flex; flex-direction: column; }
+        #featured-event-container-desktop {display: none; }
+
       }
 
    </style>
   </head>
   <body>
-    <a href="https://store.larryslentils.com" id="mast-top"><img src="./images/ntm0201ac-00.png" height="45px" /></a>
-    <div id="mast-image">
-        <div id="mast-CTA-desktop"><div class="image-position-1">
-            <a href="https://store.larryslentils.com"><img src="./images/LL&F-lilac-02.png" height="200px" />
-            </a>
-            <div class="mast-message fix-mast-message-margin">Try Supernatural B2B Hospitality. Taste power.</div>
-        </div></div>
+    <a href="https://larryleathers.org" id="mast-top"><img src="./images/ntm0201ae-00.png" height="45px" /></a>
+
+    <div id="featured-event-container-desktop">
+        <div id="featured-event-image"></div>
+
+        <div id="featured-event-announcement">
+
+            <div class="purple">Marketing & Social Responsibility - A <i>Deliver Healthy</i> Event</div>
+            <div class="events-title">LET'S TELL THE HISTORIES THAT HONOR ASIANS, TO SOCIALLY PROFIT, TOGETHER.</div>
+
+            <div class="feature-tm">
+                <a href="https://deliverhealthy.com"><img class="feature-tm-image" src="./images/DHbdge001.png"  / ></a>     
+            </div>
+        </div>
     </div>
-    <div id="mast-CTA-mobile">
-        <a href="https://store.larryslentils.com"><img src="./images/LL&F-00-ntrdith.png" height="200px" />
-        </a>
-        <div class="mast-message">Try Supernatural B2B Hospitality. Taste power.</div> 
+
+    <div id="featured-event-container-mobile">
+
+        <div id="featured-event-announcement">
+
+            <div class="purple">Marketing & Social Responsibility - A <i>Deliver Healthy</i> Event</div>
+            <div class="events-title">LET'S TELL THE HISTORIES THAT HONOR ASIANS, TO SOCIALLY PROFIT, TOGETHER.</div>
+
+            <div class="feature-tm">
+                <a href="https://deliverhealthy.com"><img class="feature-tm-image" src="./images/DHbdge001.png"  / ></a>     
+            </div>
+        </div>
+
+        <div id="featured-event-image"></div>
+
     </div>
 
     <div id="service-description-container">
-        <div id="introduction-container">
-            <div id="introduction-left-container">
-                <img src="./images/llsvmk-01.png" width="75%" />
+        <div id="benefit-container-2">
+            <div class="rewards-benefit-1">Join us in NYC on Tuesday, February 21 to start honoring "all who contribute", particularly those who are of Asian heritage.
+                <p class="purple">For example,</p>
+
+                <p class="purple">Instead of lamenting the lack of Asian-American history books, <span class="emphatic">(1) let us reach millions of families by authoring, publishing, and distributing our own.</emphatic></p>
+
+                <p class="purple">(2) Then, let's produce standardized exams with prizes to incentivize study!</p>
+
+                <p class="purple">Ready to act?</p>
+
+                <p>We are meeting in Room 5A at 10:00am - 11:00am E.S.T.</p>
             </div>
-            <div id="introduction-right-container">
-                <div id="intro-pretitle">DELIVER HEALTHY FRICTIONLESS MARKETS:</div>
-                <div id="intro-title">Try a savory cup of Larry's Lentils Soup!</div>
-                <div id="intro-benefit-image">
-                    <a href="https://larryleathers.org/pay-whatever/"><img src="./images/pywhtevr-00.png" width="110px" /></a><span class="superscript-special">*</span>
-                </div>
-                <div id="intro-description">Consider this tasty offer as an invitation to join our "frictionless crusade". Deliver Healthy Frictionless Markets (DHFM) sellers accept a mix of cash plus fractions of a buyer's own contracted services to facilitate transactions.</div>
-                <div id="intro-branding">
-                    <img src="./images/ll-sh-sml.png" width="60px" />
-                </div>
-            </div>
+
         </div>
-        <div id="rewards-container">
-            <section>
-                <article class="rewards-buyer">
-                    <div class="rewards-title">DHFM MEMBER BUYER REWARDS</div>
-                    <div class="rewards-benefit">Keep More Cash*</div>
-                    <a href="https://larryleathers.org/pay-whatever/" id="rewards-benefit-image">
-                        <img src="./images/pywhtevr-00.png" width="100px" />
-                    </a>
-                    <p class="rewards-benefit-details">*Instead of compensating <span class="bold">Larry's Lentils</span> directly, bid whatever you think is fair for membership in a freelancer community called Deliver Healthy Frictionless Markets (DHFM). Members rigorously engineer and prototype their own, plus certify each other's service contracts in pursuit of responsible risk-measured currency alternatives.</p> 
-                </article>
+    </div>
 
-                <article class="rewards-seller">
-                    <div class="rewards-title">DHFM MEMBER SELLER REWARDS</div>
-                    <div class="rewards-benefit">Eliminate buyer price objections, yet earn 6% more per sale.</div>
-                    <div id="rewards-description">Increase overall profit margins by accepting less cash and more contracted services.</div>
-                </article>
-            </section>
 
-            <section>
-                <article-contact-simple>
-                    <div id="rewards-qr-code">
-                        <img src="./images/qrc.png" width="80px" />
-                    </div>
+    <div id="service-description-container">
 
-                    <div class="contact-container contacts">
-                        <div id="rewards-educate">Learn more, request your cup of <span class="italic">Larry's Lentils,</span> and join DHFM:</div>
-                        <a href="https://larryleathers.org/dh-frictionless-membership" id="rewards-educate-url">larryleathers.org/dh-frictionless-membership</a> 
-                    </div>   
-                </article-contact-simple>
+    </div>
 
-<!--
-                <article-contact class="contacts">
-                    <div id="rewards-educate">Learn more, request your cup of <span class="italic">Larry's Lentils,</span> and join DHFM:</div>
-                    <div id="rewards-educate-url">larryleathers.org/dh-frictionless-membership</div> 
-                </article-contact>
--->
-
-            </section>
-        </div> 
-        <div id="benefit-container">
-            <a href="https://store.larryslentils.com" class="plain"><p class="repeat-principal-benefit">Enjoy Unlimited B2B Introductions, feat. Larry's Lentils & Friends!</p></a>
+    <div id="rsvp-container">
+        <div id="rsvp-message"><div class="repeat-principal-benefit orange">*RSVP to our NYC event:</div></div>
+        <div class="rsvp-image"></div>
+        <div class="wework-event-title">
+            <p>Networking Social Hour</p>
+            <p>WeWork Gotham</p>
         </div>
-        
-        <div id="footer-container">
+        <div class="wework-event-date">
+            <p>February 21, 2023</p>
+            <p>5:00 PM - 7:00 PM</p>
+            <p><b>*(Deliver Healthy event is in Room 5A, 10AM - 11AM)</b></p>
+        </div>
+        <div class="wework-event-arrival">
+            <p>Arrive and check-in anytime after 9am to work from WeWork for the day.</p>
+        </div>
+        <div id="wework-button-container">
+            <button class="wework-event-button">
+                <a class="grp p0 pointer" rel="noopener noreferrer" style="color:inherit !important;" href="https://networkevent63d7e398bf5ac.splashthat.com/" target="_blank" role="link" tabindex="0">RSVP</a>
+            </button>
+        </div>
+    </div>
+ 
+    <div id="footer-container-1">
+            <div class="rewards-title">ORGANIZED BY:</div>
             <a href="https://larryleathers.org/dh-frictionless-membership/"><img src="./images/dhfm05bmust.png" width="50px" /></a>
             <p class="brand-attribution">DELIVER HEALTHY FRICTIONLESS MARKETS. TASTE POWER.</p>
-        </div>
-
+            <p class="copyright">&copy;2023 Naehe</p>
     </div>
-
-
-<!--
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
--->
 
   </body>
 </html>
